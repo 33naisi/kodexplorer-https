@@ -1,5 +1,5 @@
 # kodexplorer-https
-kodexplorer4.40版本，非kodbox，此版本支持https访问。
+可道云kodexplorer，版本4.40，非kodbox，此容器支持https访问。
 
 持久性数据：/var/www/html/ /etc/apache2/ssl/。
 
