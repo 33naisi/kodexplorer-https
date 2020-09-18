@@ -38,7 +38,7 @@ RUN set -x \
  && sed -i "s/post_max_size = 8M/post_max_size = 150M/" /usr/local/etc/php/php.ini \
  && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 150M/" /usr/local/etc/php/php.ini \
  && echo 'open_basedir = /var/www/html/:/tmp/' >> /usr/local/etc/php/php.ini \
- && echo -e '<?php\n//分片上传: 每个切片5M,需要php.ini 中upload_max_filesize大于此值\n$GLOBALS['config']['settings']['updloadChunkSize'] = 1024*1024*5;\n//上传并发数量; 推荐15个并发;\n$GLOBALS['config']['settings']['updloadThreads'] = 15;' > /usr/src/kodexplorer/config/setting_user.php
+ && echo '<?php\n//分片上传: 每个切片5M,需要php.ini 中upload_max_filesize大于此值\n$GLOBALS['config']['settings']['updloadChunkSize'] = 1024*1024*5;\n//上传并发数量; 推荐15个并发;\n$GLOBALS['config']['settings']['updloadThreads'] = 15;' > /usr/src/kodexplorer/config/setting_user.php
 
 VOLUME /var/www/html/ /ssl/
 EXPOSE 80 443
