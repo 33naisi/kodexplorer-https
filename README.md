@@ -1,7 +1,7 @@
 # kodexplorer-https
 可道云kodexplorer，版本4.40，非kodbox，此容器支持https访问。
 
-运行：docker run -d --name kodexplorer --restart always -p 81:80 -p 444:443 -v $your_dir:/var/www/html/data/ -v $your_ssl_dir:/ssl/ 33naisi/kodexplorer2
+运行：docker run -d --name kodexplorer --restart always -p 81:80 -p 444:443 -v $your_data_dir:/var/www/html/ -v $your_ssl_dir:/ssl/ 33naisi/kodexplorer2
 
 持久性数据：/var/www/html/ /ssl/。
 
