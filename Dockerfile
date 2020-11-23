@@ -13,8 +13,8 @@ RUN set -x \
  && sed -i "33c SSLCertificateFile\t/ssl/ssl.pem" /etc/apache2/sites-available/default-ssl.conf \
  && sed -i "34c SSLCertificateKeyFile\t/ssl/ssl.key" /etc/apache2/sites-available/default-ssl.conf \
  && ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/000-default-ssl.conf \
- && sed -i "/<\/VirtualHost>/i\ \tRewriteEngine on\n\tRewriteCond %{HTTPS} !=on\n\tRewriteRule ^(.*) https://%{SERVER_NAME}$1 [L,R]" /etc/apache2/sites-available/000-default.conf \
- && a2enmod rewrite \
+# && sed -i "/<\/VirtualHost>/i\ \tRewriteEngine on\n\tRewriteCond %{HTTPS} !=on\n\tRewriteRule ^(.*) https://%{SERVER_NAME}$1 [L,R]" /etc/apache2/sites-available/000-default.conf \
+# && a2enmod rewrite \
  && a2enmod ssl
 
 #安装环境。
